@@ -2,33 +2,59 @@
 import Layout from '../layouts/Layout.astro';
 
 import '../styles/styles.css';
-
-const a = 5;
 ---
 
 <Layout title='Welcome to Astro.'>
-  <main>
-    <h1 class='text-center text-8xl text-purple-400'>Hola mundo</h1>
-    <p class='text-center text-neutral-100'>El valor de a es: {a}</p>
-    <form class='text-center'>
-      <input type='text' />
-      <button type='submit' class='bg-purple-400'>send</button>
-    </form>
+  <main
+    class='flex min-h-screen flex-col items-center justify-center bg-very-dark-blue px-6 py-[88px]'>
+    <div
+      class='mx-auto max-h-[780px] max-w-[327px] rounded-lg bg-dark-desaturated-blue'>
+      <img
+        class='mb-[39px] max-h-[240px] max-w-[327px] rounded-t-lg'
+        src='images/image-header-mobile.jpg'
+        alt=''
+      />
+      <div class='px-8'>
+        <h1
+          class='mb-[14px] text-center font-inter text-[27px] font-bold leading-8 text-white'>
+          Get insights that help your business grow.
+        </h1>
+        <p
+          class='mb-[35px] text-center font-inter font-normal leading-normal text-white/75'>
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+      </div>
+      <div class='mb-[38px] flex flex-col items-center gap-6'>
+        <div class='text-center'>
+          <p class='font-inter text-[24px] font-bold text-white'>10k+</p>
+          <p class='font-lexend text-[13px] font-normal text-white/60'>
+            COMPANIES
+          </p>
+        </div>
+        <div class='text-center'>
+          <p class='font-inter text-[24px] font-bold text-white'>314</p>
+          <p class='font-lexend text-[13px] font-normal text-white/60'>
+            TEMPLATES
+          </p>
+        </div>
+        <div class='text-center'>
+          <p class='font-inter text-[24px] font-bold text-white'>12m+</p>
+          <p class='font-lexend text-[13px] font-normal text-white/60'>
+            QUERIES
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='mx-auto pt-10 text-center text-xs xl:text-base'>
+      Challenge by <a
+        href='https://www.frontendmentor.io?ref=challenge'
+        target='_blank'>Frontend Mentor</a
+      >. Coded with ❤️ by <a
+        class='font-bold'
+        href='https://www.frontendmentor.io/profile/EA-Morales'>L3GOL4S</a
+      >.
+    </div>
   </main>
 </Layout>
-
-<script>
-  console.log('Hola mundo');
-
-  // select the form element
-  const form = document.querySelector('form');
-
-  // add an event listener to the form
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    //console log the input value
-    console.log(form.querySelector('input').value);
-    // reset the input value
-    form.querySelector('input').value = '';
-  });
-</script>
