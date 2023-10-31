@@ -1,53 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import HeaderImage from '../../public/images/image-header-mobile.jpg';
+
 import '../styles/styles.css';
 ---
 
 <Layout title='Welcome to Astro.'>
   <main
-    class='flex min-h-screen flex-col items-center justify-center bg-very-dark-blue px-6 py-[88px]'>
+    class='flex min-h-screen flex-col items-center justify-center bg-very-dark-blue px-6 py-[88px] 3xl:px-[165px] 3xl:py-[177px]'>
     <div
-      class='mx-auto max-h-[780px] max-w-[327px] rounded-lg bg-dark-desaturated-blue'>
-      <img
-        class='mb-[39px] max-h-[240px] max-w-[327px] rounded-t-lg'
+      class='mx-auto max-h-[780px] max-w-[327px] rounded-lg bg-dark-desaturated-blue 3xl:grid 3xl:w-full 3xl:grid-cols-2'>
+      <div
+        class="mb-[39px] h-[240px] w-[327px] rounded-t-lg bg-soft-violet bg-[url('./images/image-header-mobile.jpg')] bg-cover bg-center bg-blend-multiply 3xl:hidden">
+      </div>
+
+      <!-- <img
+        class='mb-[39px] max-h-[240px] max-w-[327px] rounded-t-lg bg-soft-violet'
         src='images/image-header-mobile.jpg'
         alt=''
-      />
-      <div class='px-8'>
-        <h1
-          class='mb-[14px] text-center font-inter text-[27px] font-bold leading-8 text-white'>
-          Get insights that help your business grow.
-        </h1>
-        <p
-          class='mb-[35px] text-center font-inter font-normal leading-normal text-white/75'>
-          Discover the benefits of data analytics and make better decisions
-          regarding revenue, customer experience, and overall efficiency.
-        </p>
+      /> -->
+
+      <!-- STATS -->
+      <div>
+        <div class='px-8'>
+          <h1
+            class='mb-[14px] text-center font-inter text-[27px] font-bold leading-8 text-white'>
+            Get <span class='text-soft-violet'>insights</span> that help your
+            business grow.
+          </h1>
+          <p
+            class='mb-[35px] text-center font-inter font-normal leading-normal text-white/75'>
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+        </div>
+        <div class='mb-[38px] flex flex-col items-center gap-6'>
+          <div class='text-center'>
+            <p class='font-inter text-[24px] font-bold text-white'>10k+</p>
+            <p class='font-lexend text-[13px] font-normal text-white/60'>
+              COMPANIES
+            </p>
+          </div>
+          <div class='text-center'>
+            <p class='font-inter text-[24px] font-bold text-white'>314</p>
+            <p class='font-lexend text-[13px] font-normal text-white/60'>
+              TEMPLATES
+            </p>
+          </div>
+          <div class='text-center'>
+            <p class='font-inter text-[24px] font-bold text-white'>12M+</p>
+            <p class='font-lexend text-[13px] font-normal text-white/60'>
+              QUERIES
+            </p>
+          </div>
+        </div>
       </div>
-      <div class='mb-[38px] flex flex-col items-center gap-6'>
-        <div class='text-center'>
-          <p class='font-inter text-[24px] font-bold text-white'>10k+</p>
-          <p class='font-lexend text-[13px] font-normal text-white/60'>
-            COMPANIES
-          </p>
-        </div>
-        <div class='text-center'>
-          <p class='font-inter text-[24px] font-bold text-white'>314</p>
-          <p class='font-lexend text-[13px] font-normal text-white/60'>
-            TEMPLATES
-          </p>
-        </div>
-        <div class='text-center'>
-          <p class='font-inter text-[24px] font-bold text-white'>12m+</p>
-          <p class='font-lexend text-[13px] font-normal text-white/60'>
-            QUERIES
-          </p>
-        </div>
+      <!-- STATS -->
+
+      <div
+        class="mb-[39px] hidden h-[240px] w-[327px] rounded-t-lg bg-soft-violet bg-[url('./images/image-header-desktop.jpg')] bg-cover bg-center bg-blend-multiply 3xl:block">
       </div>
     </div>
 
-    <div class='mx-auto pt-10 text-center text-xs xl:text-base'>
+    <div class='xl:text-base mx-auto pt-10 text-center text-xs'>
       Challenge by <a
         href='https://www.frontendmentor.io?ref=challenge'
         target='_blank'>Frontend Mentor</a
