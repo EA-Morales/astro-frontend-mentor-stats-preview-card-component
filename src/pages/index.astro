@@ -1,22 +1,33 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro';
 
-import HeaderImage from '../../public/images/image-header-mobile.jpg';
-
-import '../styles/styles.css';
+import image from '../../public/images/image-header-mobile.jpg';
 ---
 
 <Layout title='Welcome to Astro.'>
   <main
-    class='flex min-h-screen flex-col items-center justify-center bg-very-dark-blue px-6 py-[88px] 3xl:px-[165px] 3xl:py-[177px]'>
+    class='3xl:px-[165px] 3xl:py-[177px] min-h-screen flex flex-col items-center justify-center bg-very-dark-blue px-6 py-[88px]'>
     <div
-      class='mx-auto max-h-[780px] max-w-[327px] rounded-lg bg-dark-desaturated-blue 3xl:grid 3xl:w-full 3xl:grid-cols-2'>
-      <div
-        class="mb-[39px] h-[240px] w-[327px] rounded-t-lg bg-soft-violet bg-[url('./images/image-header-mobile.jpg')] bg-cover bg-center bg-blend-multiply 3xl:hidden">
+      class='3xl:grid 3xl:w-full 3xl:grid-cols-2 mx-auto max-h-[780px] max-w-[327px] rounded-lg bg-dark-desaturated-blue'>
+      <!-- IMAGE -->
+      <div class='relative h-[240px] w-[327px] overflow-hidden rounded-t-lg'>
+        <div
+          class='absolute z-10 h-[240px] w-[327px] bg-soft-violet mix-blend-multiply'>
+        </div>
+        <Image
+          class='absolute z-0'
+          src={image}
+          alt='A bird.'
+          width='327'
+          height='240'
+        />
       </div>
+      <!-- IMAGE -->
 
       <!-- <img
-        class='mb-[39px] max-h-[240px] max-w-[327px] rounded-t-lg bg-soft-violet'
+        class='bg-soft-violet z--10 mb-[39px] max-h-[240px] max-w-[327px] rounded-t-lg'
         src='images/image-header-mobile.jpg'
         alt=''
       /> -->
@@ -25,32 +36,32 @@ import '../styles/styles.css';
       <div>
         <div class='px-8'>
           <h1
-            class='mb-[14px] text-center font-inter text-[27px] font-bold leading-8 text-white'>
+            class='font-inter mb-[14px] text-center text-[27px] text-white font-bold leading-8'>
             Get <span class='text-soft-violet'>insights</span> that help your
             business grow.
           </h1>
           <p
-            class='mb-[35px] text-center font-inter font-normal leading-normal text-white/75'>
+            class='font-inter mb-[35px] text-center text-white/75 font-normal leading-normal'>
             Discover the benefits of data analytics and make better decisions
             regarding revenue, customer experience, and overall efficiency.
           </p>
         </div>
         <div class='mb-[38px] flex flex-col items-center gap-6'>
           <div class='text-center'>
-            <p class='font-inter text-[24px] font-bold text-white'>10k+</p>
-            <p class='font-lexend text-[13px] font-normal text-white/60'>
+            <p class='font-inter text-[24px] text-white font-bold'>10k+</p>
+            <p class='font-lexend text-[13px] text-white/60 font-normal'>
               COMPANIES
             </p>
           </div>
           <div class='text-center'>
-            <p class='font-inter text-[24px] font-bold text-white'>314</p>
-            <p class='font-lexend text-[13px] font-normal text-white/60'>
+            <p class='font-inter text-[24px] text-white font-bold'>314</p>
+            <p class='font-lexend text-[13px] text-white/60 font-normal'>
               TEMPLATES
             </p>
           </div>
           <div class='text-center'>
-            <p class='font-inter text-[24px] font-bold text-white'>12M+</p>
-            <p class='font-lexend text-[13px] font-normal text-white/60'>
+            <p class='font-inter text-[24px] text-white font-bold'>12M+</p>
+            <p class='font-lexend text-[13px] text-white/60 font-normal'>
               QUERIES
             </p>
           </div>
@@ -59,11 +70,11 @@ import '../styles/styles.css';
       <!-- STATS -->
 
       <div
-        class="mb-[39px] hidden h-[240px] w-[327px] rounded-t-lg bg-soft-violet bg-[url('./images/image-header-desktop.jpg')] bg-cover bg-center bg-blend-multiply 3xl:block">
+        class="3xl:block mb-[39px] hidden h-[240px] w-[327px] rounded-t-lg bg-[url('./images/image-header-desktop.jpg')] bg-soft-violet bg-cover bg-center bg-blend-multiply">
       </div>
     </div>
 
-    <div class='xl:text-base mx-auto pt-10 text-center text-xs'>
+    <div class='mx-auto pt-10 text-center text-xs xl:text-base'>
       Challenge by <a
         href='https://www.frontendmentor.io?ref=challenge'
         target='_blank'>Frontend Mentor</a

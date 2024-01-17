@@ -1,11 +1,13 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
   // ...
   "extends": [
     "eslint:recommended", // set of rules recommended by ESLint
     "plugin:astro/recommended", // set of rules recommended by Astro
     "plugin:astro/jsx-a11y-recommended", // set of rules recommended by Astro for JSX accessibility
-    "plugin:tailwindcss/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "@unocss"
   ],
   /* "plugins": [
     "prettier"
